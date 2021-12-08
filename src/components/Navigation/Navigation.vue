@@ -3,7 +3,9 @@
     <ul class="nav-list">
       <li @click="switchingTab" class="nav-list-item">ЖАНРЫ</li>
       <li>ОНГОИНГИ</li>
-      <li>СПИСОК АНИМЕ</li>
+      <router-link to="/animelist"
+        ><li class="nav-list-anime">АНИМЕ</li></router-link
+      >
       <li>ТОП</li>
     </ul>
     <transition name="genre">
@@ -41,11 +43,16 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
 .nav-list {
   position: relative;
   padding: 10px 10px 10px 10px;
   display: flex;
   justify-content: space-between;
+  background-color: rgb(168, 184, 233);
+  border-radius: 10px;
 }
 .nav-list-item {
   position: relative;
@@ -71,28 +78,33 @@ export default {
   display: block;
   width: 45vh;
   border: 1px solid blue;
+  background-color: rgb(238, 249, 224);
   border-radius: 5px;
+  opacity: 1;
 }
 .genre-enter-from {
   opacity: 0;
-  transform: translateX(-40px);
 }
 .genre-enter-active {
   transition: all 0.5s ease-out;
 }
 .genre-enter-to {
   opacity: 1;
-  transform: translateX(15px);
 }
 .genre-leave-from {
   opacity: 1;
-  transform: translateX(15px);
 }
 .genre-leave-active {
   transition: all 0.5s ease-out;
 }
 .genre-leave-to {
   opacity: 0;
-  transform: translateX(-40px);
+}
+
+.nav-list-anime {
+  color: black;
+}
+.nav-list-anime:hover {
+  color: green;
 }
 </style>

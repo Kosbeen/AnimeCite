@@ -1,20 +1,16 @@
 <template>
   <section class="main-container">
     <navigation></navigation>
+    <router-view></router-view>
   </section>
-  <!-- <section class="main-container">
-    <div class="anime-container">
-      <card-element></card-element>
-    </div> -->
-  <!-- </section> -->
 </template>
 
 <script>
 // import CardElement from './components/Cardelements/CardElement.vue';
 import Navigation from './components/Navigation/Navigation.vue';
+
 export default {
   components: {
-    // CardElement,
     Navigation,
   },
   data() {
