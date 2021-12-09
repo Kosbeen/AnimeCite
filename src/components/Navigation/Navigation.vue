@@ -22,6 +22,7 @@
         v-show="switchTab"
         @mouseover="genreMouseOn"
         @mouseleave="genreMouseLeave"
+        @close="closeGenreList"
       ></genres-mouse-show>
     </transition>
   </div>
@@ -86,7 +87,7 @@ a {
   height: 45px;
 }
 
-.genre-enter-from {
+/* .genre-enter-from {
   transform: scale(0);
 }
 .genre-enter-active {
@@ -103,7 +104,7 @@ a {
 }
 .genre-leave-to {
   transform: scale(0);
-}
+} */
 
 .nav-list-anime {
   color: black;
