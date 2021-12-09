@@ -1,49 +1,53 @@
 <template>
-  <div>
+  <base-dialog class="genre-container">
     <div class="genre-button-container">
       <button class="genre-button" @click="closeButtonGenre">Закрыть</button>
     </div>
     <ul class="genre-list">
-      <li v-for="item in genres" :key="item">
+      <li v-for="item in genres" :key="item" class="genre-list-item">
         {{ item.genre }}
       </li>
     </ul>
-  </div>
+  </base-dialog>
 </template>
 
 <script>
 export default {
+  inject: ['genres'],
   emits: ['close'],
-  data() {
-    return {
-      genres: [
-        { genre: 'Боевые искусства' },
-        { genre: 'Романтика' },
-        { genre: 'Меха' },
-        { genre: 'Мистика' },
-      ],
-    };
-  },
   methods: {
     closeButtonGenre() {
       this.$emit('close');
     },
   },
+  data() {
+    return {};
+  },
 };
 </script>
 
 <style scoped>
+.genre-container {
+  width: 50%;
+  border: 3px solid rgb(117, 167, 248);
+  border-radius: 15px;
+}
 .genre-button-container {
   display: flex;
   justify-content: flex-end;
-  margin: 2px 4px 0 0;
+  margin: 3px 12px 0 0;
 }
 .genre-button {
   padding: 0 2px;
   background: rgba(131, 181, 246, 0.541);
 }
 .genre-list {
+  display: flex;
+  justify-content: space-between;
   margin: 0 0 10px 0;
-  padding: 5px 0 0 8px;
+  padding: 12px 18px 18px 15px;
+}
+.genre-list-item {
+  font-size: 20px;
 }
 </style>

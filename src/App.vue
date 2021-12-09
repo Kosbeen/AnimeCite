@@ -6,15 +6,26 @@
 </template>
 
 <script>
-// import CardElement from './components/Cardelements/CardElement.vue';
 import Navigation from './components/Navigation/Navigation.vue';
 
 export default {
   components: {
     Navigation,
   },
+  provide() {
+    return {
+      genres: this.genres,
+    };
+  },
   data() {
-    return {};
+    return {
+      genres: [
+        { genre: 'Боевые искусства' },
+        { genre: 'Романтика' },
+        { genre: 'Меха' },
+        { genre: 'Мистика' },
+      ],
+    };
   },
   methods: {},
 };

@@ -8,13 +8,15 @@ import BaseCard from './components/BaseComponents/BaseCard.vue'
 import BaseButton from './components/BaseComponents/BaseButton.vue'
 import BaseDialog from './components/BaseComponents/BaseDialog.vue'
 import AnimeList from './components/Page/AnimeList.vue'
+import GenresPage from './components/Page/GenresPage.vue'
 
 
 const app = createApp(App);
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        {path: '/animelist', component: AnimeList}
+        {path: '/animelist', component: AnimeList},
+        {path: '/genres', component: GenresPage}
     ]
 })
 

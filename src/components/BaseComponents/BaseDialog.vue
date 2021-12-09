@@ -1,5 +1,7 @@
 <template>
-  <dialog open>slot</dialog>
+  <dialog open>
+    <slot></slot>
+  </dialog>
 </template>
 
 <style scoped></style>
