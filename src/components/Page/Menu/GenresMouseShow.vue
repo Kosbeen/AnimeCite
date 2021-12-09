@@ -1,7 +1,7 @@
 <template>
   <base-dialog class="genre-container">
     <div class="genre-button-container">
-      <button class="genre-button" @click="closeButtonGenre">Закрыть</button>
+      <button class="genre-button" @click="closeButtonGenre">X</button>
     </div>
     <ul class="genre-list">
       <li v-for="item in genres" :key="item" class="genre-list-item">
@@ -31,6 +31,7 @@ export default {
   width: 50%;
   border: 3px solid rgb(117, 167, 248);
   border-radius: 15px;
+  padding: 0;
 }
 .genre-button-container {
   display: flex;
@@ -45,7 +46,7 @@ export default {
   display: flex;
   justify-content: space-between;
   margin: 0 0 10px 0;
-  padding: 12px 18px 18px 15px;
+  padding: 8px 8px 8px 8px;
 }
 .genre-list-item {
   font-size: 20px;

@@ -38,11 +38,7 @@
       момент.
     </p>
   </div>
-  <div>
-    <base-card>
-      <anime-list-data></anime-list-data>
-    </base-card>
-  </div>
+  <anime-list-data> </anime-list-data>
 </template>
 
 <script>
